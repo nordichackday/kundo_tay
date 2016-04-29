@@ -1,0 +1,9 @@
+#!/bin/bash
+
+. /app/torch/install/bin/torch-activate
+th sample.lua \
+    -checkpoint /data/file.t7 \
+    -gpu -1 \
+    -sample_text "$1" \
+    -length 100 \
+    -temperature 0.8

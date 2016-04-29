@@ -55,3 +55,4 @@ ENV LUA_CPATH='/app/torch/install/lib/?.so;'$LUA_CPATH
 
 ADD file.t7 /data/file.t7
 ADD file.json /data/file.json
+ADD ask /app/ask
