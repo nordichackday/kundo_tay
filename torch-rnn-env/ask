@@ -6,5 +6,5 @@ th sample.lua \
     -checkpoint /data/file.t7 \
     -gpu -1 \
     -start_text "$1" \
-    -length 100 \
+    -length 500 \
     -temperature 0.8
