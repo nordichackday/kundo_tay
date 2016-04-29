@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /app/torch-rnn
 . /app/torch/install/bin/torch-activate
 th sample.lua \
     -checkpoint /data/file.t7 \
