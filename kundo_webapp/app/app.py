@@ -14,7 +14,7 @@ def index():
 
 @app.route('/ask', methods=['POST'])
 def ask():
-    return subprocess.Popen("/app/ask hello",
+    return subprocess.Popen("/app/ask '{}'".format(request.form['q']),
             shell=True,
             stdout=subprocess.PIPE).stdout.read()
 
