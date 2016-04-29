@@ -1,6 +1,7 @@
+IMAGE=kundo_torch_env
 
 build:
-	docker build -t kundo .
+	docker build -t ${IMAGE} .
 
 debug: build
-	docker run -tiv $$PWD/data:/data kundo bash
+	docker run -tiv ${IMAGE} bash
