@@ -14,9 +14,14 @@ def index():
 
 @app.route('/ask', methods=['POST'])
 def ask():
-    return subprocess.Popen("/app/ask '{}'".format(request.form['q']),
+    out = subprocess.Popen("/app/ask '{}'".format(request.form['q']),
             shell=True,
             stdout=subprocess.PIPE).stdout.read()
+    ps = out.split("\n")
+    first = ps.pop()
+    for p in ps:
+        return p
+    return first
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
